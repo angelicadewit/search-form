@@ -1,0 +1,144 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+@import 'reset';
+
+$primary: #148080;
+$blue: #4571b5;
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ddd;
+}
+
+.visually-hidden {
+	border-width: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: 1px !important;
+}
+
+
+/* 2. Content ================================= */
+
+.content {
+	position: relative;
+	font-family: sans-serif;
+	width: 90%;
+	max-width: 500px;
+	margin: 140px auto;
+	padding: 30px 20px 30px 30px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.search {
+		position: relative;
+		width: 300px;
+	  }
+	  .search-input-field {
+		width: 100%;
+		border: 1px solid #ddd;
+		border-radius: 100px;
+		padding: 10px 100px 10px 20px; 
+		outline: none;
+		margin: 0;
+
+		&::-ms-clear {
+			display: none;
+		}
+
+		&::placeholder {
+			color: $primary;
+			font-style: italic;
+			font-size: 1.2em;
+			font-family: sans-serif;
+		  }
+
+		&.has-input{
+			border-color: $primary;
+		}
+	  }
+	  .btn-cluster{
+		display: flex;
+		position: absolute;
+		right: 0px; 
+		top: 0px;
+		bottom: 0px;
+		border: 0;
+		margin: 0;
+		z-index: 2;
+		
+		button{			
+			outline: none;
+			background: transparent;
+			border: none;
+		}
+
+		.clear-button{
+			color: $blue;
+			font-weight: 900;
+			font-family: "arial black";
+
+			&.hidden{
+				display: none;
+			}
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		.search-button{
+			position: relative;
+			width: 17px;
+			height: 100%;
+			padding: 0 20px;
+			background: transparent;
+			transition: 0.3s;
+			border-radius: 0 100px 100px 0;
+			
+			svg{
+				fill: $primary;
+				width: 17px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			&:hover{
+				background: $primary;
+				cursor: pointer;
+	
+				svg{
+					fill: white;
+				}
+			}
+		}
+	}
+}

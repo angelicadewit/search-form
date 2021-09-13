@@ -1,0 +1,192 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ddd;
+}
+
+.visually-hidden {
+	border-width: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: 1px !important;
+}
+
+/* 2. Content ================================= */
+.content {
+	position: relative;
+	font-family: sans-serif;
+	width: 90%;
+	max-width: 500px;
+	margin: 140px auto;
+	padding: 30px 20px 30px 30px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content .search {
+	position: relative;
+	width: 300px;
+}
+
+.content .search-input-field {
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	padding: 10px 100px 10px 20px;
+	outline: none;
+	margin: 0;
+}
+
+.content .search-input-field::-ms-clear {
+	display: none;
+}
+
+.content .search-input-field::placeholder {
+	color: #148080;
+	font-style: italic;
+	font-size: 1.2em;
+	font-family: sans-serif;
+}
+
+.content .search-input-field.has-input {
+	border-color: #148080;
+}
+
+.content .btn-cluster {
+	display: flex;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	border: 0;
+	margin: 0;
+	z-index: 2;
+}
+
+.content .btn-cluster button {
+	outline: none;
+	background: transparent;
+	border: none;
+}
+
+.content .btn-cluster .clear-button {
+	color: #4571b5;
+	font-weight: 900;
+	font-family: "arial black";
+}
+
+.content .btn-cluster .clear-button.hidden {
+	display: none;
+}
+
+.content .btn-cluster .clear-button:hover {
+	cursor: pointer;
+}
+
+.content .btn-cluster .search-button {
+	position: relative;
+	width: 17px;
+	height: 100%;
+	padding: 0 20px;
+	background: transparent;
+	transition: 0.3s;
+	border-radius: 0 100px 100px 0;
+}
+
+.content .btn-cluster .search-button svg {
+	fill: #148080;
+	width: 17px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content .btn-cluster .search-button:hover {
+	background: #148080;
+	cursor: pointer;
+}
+
+.content .btn-cluster .search-button:hover svg {
+	fill: white;
+}
+
+/*# sourceMappingURL=main.css.map */
